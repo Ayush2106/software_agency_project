@@ -97,10 +97,10 @@ export default function Process() {
             Our process
           </span>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-violet-950 mt-3">
-            Flowchart roadmap — <span className="gradient-text">block by block</span>
+            How we <span className="gradient-text">deliver</span>
           </h2>
           <p className="mt-4 text-violet-900/60 text-lg">
-            Every engagement follows this path. Develop & Test loop until you approve — then we deploy.
+            A clear path from idea to production — with room to refine until you are confident to launch.
           </p>
         </AnimatedSection>
 

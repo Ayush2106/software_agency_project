@@ -16,10 +16,17 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "VioletForge | AI-Powered Custom Software Agency",
+  title: "PrimeAxis Solutions | Custom Software Studio",
   description:
-    "Stunning websites, mobile apps, and AI-native software built by a global team. VioletForge delivers bespoke digital products worldwide.",
-  keywords: ["software agency", "AI development", "web development", "app development"],
+    "PrimeAxis Solutions builds production web platforms in Australia and India — including Apply For Me, national education systems, and enterprise finance tools. Freelance & contract software development.",
+  keywords: [
+    "software agency",
+    "custom software",
+    "Australia",
+    "India",
+    "web development",
+    "Apply For Me",
+  ],
 };
 
 export default function RootLayout({

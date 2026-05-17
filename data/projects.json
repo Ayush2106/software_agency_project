@@ -1,46 +1,38 @@
 [
   {
-    "id": "1",
-    "title": "FinPulse AI Dashboard",
-    "client": "Global Finance Corp",
+    "id": "apply-for-me",
+    "title": "Apply For Me",
+    "client": "Australia · B2C job application services",
     "category": "Web App",
-    "description": "Real-time AI analytics dashboard with predictive insights for institutional traders.",
-    "image": "/projects/finpulse.jpg",
-    "tech": ["Next.js", "Python", "TensorFlow"],
+    "description": "Production platform for an Australian job-application service where a dedicated team submits tailored applications by hand — not bots or bulk automation. Covers client onboarding, Chrome extension role intake, ops workflows for a large application team, and real-time progress tracking for job seekers nationwide.",
+    "image": "",
+    "url": "",
+    "tech": ["Next.js", "React", "Node.js"],
     "year": "2025",
     "featured": true
   },
   {
-    "id": "2",
-    "title": "MediConnect Mobile",
-    "client": "HealthBridge EU",
-    "category": "Mobile App",
-    "description": "Cross-platform telehealth app serving 40+ countries with HIPAA-compliant AI triage.",
-    "image": "/projects/mediconnect.jpg",
-    "tech": ["React Native", "Node.js", "OpenAI"],
-    "year": "2025",
-    "featured": true
-  },
-  {
-    "id": "3",
-    "title": "RetailMind Commerce",
-    "client": "Nova Retail Group",
-    "category": "E-Commerce",
-    "description": "Headless commerce platform with AI personalization driving 34% conversion uplift.",
-    "image": "/projects/retailmind.jpg",
-    "tech": ["Next.js", "Shopify", "LangChain"],
-    "year": "2024",
-    "featured": false
-  },
-  {
-    "id": "4",
-    "title": "LogiTrack Fleet OS",
-    "client": "TransGlobal Logistics",
+    "id": "global-financing-platform",
+    "title": "World-Scale National Financing & Costing Platform",
+    "client": "International development · Confidential",
     "category": "Enterprise",
-    "description": "Fleet management system with route optimization ML across 12 time zones.",
-    "image": "/projects/logitrack.jpg",
-    "tech": ["Vue.js", "Go", "PostgreSQL"],
+    "description": "Multi-country platform for national administrators to build development plans, activity-based budgets, and funding requests. Handles high-value financing formulas with currency-level accuracy, plus review and approval flows for international funders.",
+    "image": "",
+    "url": "",
+    "tech": ["React", "Node.js", "PostgreSQL"],
     "year": "2024",
-    "featured": false
+    "featured": true
+  },
+  {
+    "id": "national-hpc-platform",
+    "title": "National Digital Holistic Progress Card System",
+    "client": "Government education · India",
+    "category": "Government",
+    "description": "Nationwide assessment platform for teachers, students, and parents to complete and manage Holistic Progress Cards digitally — academic performance, skills, behaviour, and learning activities at scale under NEP 2020, with secure, reliable student records.",
+    "image": "",
+    "url": "",
+    "tech": ["Next.js", "React", "PostgreSQL"],
+    "year": "2024",
+    "featured": true
   }
 ]

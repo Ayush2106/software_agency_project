@@ -16,28 +16,28 @@ const services = [
     icon: Globe,
     title: "Website Development",
     description:
-      "Blazing-fast, SEO-optimized sites with AI-generated content pipelines and conversion-focused UX.",
+      "Marketing sites and production web apps — fast, accessible, and built to convert visitors into leads.",
     gradient: "from-violet-500 to-purple-400",
   },
   {
     icon: Smartphone,
     title: "App Development",
     description:
-      "Native & cross-platform mobile apps with intelligent features, offline-first architecture, and polish.",
+      "Cross-platform and native mobile apps when your product needs to live in users' pockets.",
     gradient: "from-purple-500 to-fuchsia-400",
   },
   {
     icon: Brain,
     title: "AI Integration",
     description:
-      "Custom LLM agents, RAG systems, and automation that embed intelligence into every workflow.",
+      "Practical AI — assistants, automation, and integrations where they save time, not just buzzwords.",
     gradient: "from-indigo-500 to-violet-400",
   },
   {
     icon: Code2,
     title: "Custom Software",
     description:
-      "Bespoke SaaS, dashboards, and internal tools architected for scale — built exactly for your vision.",
+      "Ops dashboards, client portals, Chrome extensions, and bespoke platforms — like the work in our portfolio.",
     gradient: "from-violet-600 to-indigo-400",
   },
   {
@@ -69,8 +69,8 @@ export default function Services() {
             <span className="gradient-text">deliver</span>
           </h2>
           <p className="mt-4 text-violet-900/60 text-lg">
-            From concept to launch, we fuse cutting-edge AI with world-class engineering
-            so your product stands out — not blends in.
+            End-to-end delivery for founders and teams who need software that works in production —
+            especially when workflows, data, and accuracy matter.
           </p>
         </AnimatedSection>
 

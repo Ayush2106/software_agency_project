@@ -14,10 +14,10 @@ export default function Industries() {
             Industries
           </span>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-violet-950 mt-3">
-            Top sectors we <span className="gradient-text">dominate</span>
+            Sectors we <span className="gradient-text">build for</span>
           </h2>
           <p className="mt-4 text-violet-900/60 text-lg">
-            Deep domain expertise — not generic templates. Real products for regulated, complex industries.
+            Grounded in real deliveries — operations, government, education, and development finance.
           </p>
         </AnimatedSection>
 

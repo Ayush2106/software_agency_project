@@ -19,11 +19,11 @@ export default function CTA() {
         </div>
         <div className="relative z-10">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            Ready to build something extraordinary?
+            Have a project in mind?
           </h2>
           <p className="mt-4 text-violet-100 text-lg max-w-xl mx-auto">
-            Tell us your vision. We&apos;ll architect, design, and ship an AI-powered product
-            that makes your competitors nervous.
+            Tell us what you are building — web app, ops platform, or national-scale system.
+            We will respond with an honest scope and timeline.
           </p>
           <Link
             href="/contact"

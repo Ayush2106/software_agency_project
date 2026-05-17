@@ -12,7 +12,7 @@ const links = [
   { href: "/#about", label: "About" },
   { href: "/#process", label: "Process" },
   { href: "/#work", label: "Work" },
-  { href: "/#global", label: "Global" },
+  { href: "/#global", label: "Reach" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -48,7 +48,7 @@ export default function Navbar() {
             <Sparkles className="h-4 w-4" />
           </span>
           <span className="font-display text-xl font-bold tracking-tight">
-            Violet<span className="gradient-text">Forge</span>
+            Prime<span className="gradient-text">Axis</span> Solutions
           </span>
         </Link>
 

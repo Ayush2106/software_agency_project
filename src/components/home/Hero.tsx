@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -8,9 +9,24 @@ import { ArrowRight, Bot, Zap } from "lucide-react";
 const HeroScene = dynamic(() => import("@/components/three/HeroScene"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-[min(480px,55vh)] lg:h-[min(560px,72vh)]" />
+    <div className="hidden lg:block w-full h-[min(480px,55vh)] lg:h-[min(560px,72vh)]" />
   ),
 });
+
+function HeroSceneDesktop() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    setShow(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setShow(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  if (!show) return null;
+  return <HeroScene contained />;
+}
 
 export default function Hero() {
   return (
@@ -29,21 +45,21 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-violet-700 mb-8"
             >
               <Bot className="h-4 w-4" />
-              <span>100% AI-Augmented Development Studio</span>
+              <span>Custom software · Australia & India delivery</span>
               <Zap className="h-4 w-4 text-amber-500" />
             </motion.div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight text-violet-950">
-              Software that{" "}
-              <span className="gradient-text">thinks</span>
+              We build software{" "}
+              <span className="gradient-text">that ships</span>
               <br />
-              with your business
+              in the real world
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-violet-900/65 max-w-xl leading-relaxed">
-              VioletForge crafts bespoke websites, mobile apps, and AI-native platforms.
-              Not another boring agency — we ship intelligent products at lightspeed,
-              globally.
+              PrimeAxis Solutions partners with startups and organisations to deliver production
+              web platforms — from Australian B2C operations to India&apos;s national education
+              and enterprise systems. AI-augmented delivery, human-centered engineering.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -51,7 +67,7 @@ export default function Hero() {
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-violet-500 text-white font-semibold shadow-xl shadow-violet-500/30 hover:shadow-2xl hover:shadow-violet-500/40 transition-all hover:-translate-y-0.5"
               >
-                Build Something Epic
+                Start a Project
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -64,9 +80,9 @@ export default function Hero() {
 
             <div className="mt-14 grid grid-cols-3 gap-4 sm:gap-6 max-w-md">
               {[
-                { value: "120+", label: "Projects shipped" },
-                { value: "35+", label: "Countries served" },
-                { value: "24/7", label: "Global coverage" },
+                { value: "3", label: "Production platforms" },
+                { value: "2", label: "Countries delivered" },
+                { value: "AI+", label: "Augmented delivery" },
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -86,9 +102,9 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.25 }}
-            className="w-full"
+            className="hidden lg:block w-full"
           >
-            <HeroScene contained />
+            <HeroSceneDesktop />
           </motion.div>
         </div>
       </div>

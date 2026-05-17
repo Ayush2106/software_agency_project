@@ -7,23 +7,23 @@ import { Award, Users, Rocket, Shield } from "lucide-react";
 const highlights = [
   {
     icon: Award,
-    title: "12+ Years Combined",
-    desc: "Senior engineers, designers, and AI specialists with Fortune 500 & startup experience.",
+    title: "Production-first",
+    desc: "We ship live systems — ops platforms, government tools, and finance-grade web apps — not slide decks.",
   },
   {
     icon: Users,
-    title: "Elite Remote Team",
-    desc: "40+ experts across engineering, design, and ML — hand-picked for every engagement.",
+    title: "Human workflows",
+    desc: "Expert at products where people do real work: manual applications, assessments, approvals, and coordination.",
   },
   {
     icon: Rocket,
-    title: "Ship 3× Faster",
-    desc: "AI-assisted workflows cut dev cycles without sacrificing quality or security.",
+    title: "AI-augmented speed",
+    desc: "Modern tooling and AI-assisted development to move faster without cutting corners on quality.",
   },
   {
     icon: Shield,
-    title: "Enterprise-Grade",
-    desc: "SOC2-ready practices, rigorous QA, and transparent delivery at every milestone.",
+    title: "Precision matters",
+    desc: "When calculations, records, or client data must be exact, we engineer for accuracy and reliability.",
   },
 ];
 
@@ -33,19 +33,22 @@ const TEAM_IMAGE =
 export default function About() {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 mesh-bg opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 mesh-bg opacity-50 pointer-events-none" aria-hidden />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">
-            About VioletForge
+            About PrimeAxis Solutions
           </span>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-violet-950 mt-3 leading-tight">
-            Experienced builders.{" "}
-            <span className="gradient-text">Global delivery.</span>
+            A studio built to{" "}
+            <span className="gradient-text">show our work</span>
           </h2>
           <p className="mt-6 text-violet-900/65 text-lg leading-relaxed">
-            We&apos;re not a template agency. VioletForge is a specialized AI software studio —
-            partnering with ambitious brands from Silicon Valley to Mumbai to Tokyo.
+            We are a custom software studio focused on client delivery in Australia and India.
+            Our portfolio includes Apply For Me — a human-powered job application platform —
+            plus national-scale systems in education and international development finance.
+            We take on freelance and contract engagements where the product needs to work in
+            production, not just look good in a demo.
           </p>
         </AnimatedSection>
 
@@ -54,7 +57,7 @@ export default function About() {
             <div className="relative aspect-[16/9] sm:aspect-[21/9]">
               <Image
                 src={TEAM_IMAGE}
-                alt="VioletForge global team collaborating"
+                alt="PrimeAxis Solutions team collaboration"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1200px) 100vw, 1200px"
@@ -63,10 +66,10 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-violet-950/70 via-violet-950/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-center sm:text-left">
                 <p className="text-white font-display text-xl sm:text-2xl font-bold">
-                  40+ experts · 35+ countries · One mission
+                  3 platforms · 2 countries · One standard
                 </p>
                 <p className="text-violet-200 text-sm mt-2">
-                  Real people. Real photos. Real delivery — on your timezone.
+                  Clear communication, honest timelines, and software you can run a business on.
                 </p>
               </div>
             </div>

@@ -1,51 +1,19 @@
-export const leadershipTeam = [
-  {
-    name: "Alex Chen",
-    role: "CEO & AI Architect",
-    region: "San Francisco",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
-  },
-  {
-    name: "Priya Sharma",
-    role: "CTO",
-    region: "London",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
-  },
-  {
-    name: "Marcus Weber",
-    role: "Head of Design",
-    region: "Berlin",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-  },
-  {
-    name: "Yuki Tanaka",
-    role: "Lead Mobile",
-    region: "Tokyo",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
-  },
-];
-
 /** ISO 3166-1 alpha-2 — used with flagcdn.com */
 export const deliveryCountries = [
-  { code: "us", name: "United States", mapX: 18, mapY: 38 },
-  { code: "ca", name: "Canada", mapX: 20, mapY: 28 },
-  { code: "gb", name: "United Kingdom", mapX: 47, mapY: 30 },
-  { code: "de", name: "Germany", mapX: 51, mapY: 32 },
-  { code: "fr", name: "France", mapX: 48, mapY: 34 },
-  { code: "ae", name: "UAE", mapX: 58, mapY: 42 },
-  { code: "in", name: "India", mapX: 64, mapY: 44 },
-  { code: "sg", name: "Singapore", mapX: 72, mapY: 48 },
-  { code: "jp", name: "Japan", mapX: 78, mapY: 36 },
-  { code: "au", name: "Australia", mapX: 82, mapY: 62 },
-  { code: "br", name: "Brazil", mapX: 32, mapY: 58 },
-  { code: "nl", name: "Netherlands", mapX: 49, mapY: 31 },
-  { code: "es", name: "Spain", mapX: 46, mapY: 36 },
-  { code: "za", name: "South Africa", mapX: 54, mapY: 68 },
-  { code: "mx", name: "Mexico", mapX: 16, mapY: 44 },
+  {
+    code: "in",
+    name: "India",
+    mapX: 38,
+    mapY: 42,
+    detail: "National education & enterprise platforms",
+  },
+  {
+    code: "au",
+    name: "Australia",
+    mapX: 72,
+    mapY: 72,
+    detail: "B2C operations · Apply For Me",
+  },
 ];
 
 export function flagUrl(code: string, width = 160) {
@@ -54,110 +22,73 @@ export function flagUrl(code: string, width = 160) {
 
 export const industries = [
   {
-    name: "Healthcare",
-    description: "HIPAA-ready platforms, telehealth, AI diagnostics & patient portals.",
+    name: "B2C Operations",
+    description:
+      "Platforms for high-volume manual workflows — onboarding, team ops, client tracking, and extensions that keep humans in the loop.",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1556761175-5973dc0e0e0b?w=800&h=600&fit=crop",
   },
   {
-    name: "Aviation",
-    description: "Fleet ops, booking engines, maintenance dashboards & crew management.",
-    image:
-      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=600&fit=crop",
-  },
-  {
-    name: "FinTech",
-    description: "Trading dashboards, payment rails, fraud AI & regulatory compliance.",
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
-  },
-  {
-    name: "E-Commerce",
-    description: "Headless storefronts, personalization engines & omnichannel logistics.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-  },
-  {
-    name: "EdTech",
-    description: "LMS platforms, adaptive learning AI & virtual classroom experiences.",
+    name: "Government & EdTech",
+    description:
+      "Nationwide education systems, digital assessment records, and public-sector tools built for scale, security, and NEP-aligned delivery.",
     image:
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop",
   },
   {
-    name: "Logistics",
-    description: "Route optimization, warehouse IoT, real-time tracking & last-mile apps.",
+    name: "Development Finance",
+    description:
+      "Multi-country financing and costing platforms with precise formulas, budgets, and approval flows for international programmes.",
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
-  },
-];
-
-export const saasShowcase = [
-  {
-    name: "FinPulse Pro",
-    category: "B2B SaaS · FinTech",
-    revenue: "$4.2M ARR",
-    users: "12K+ active traders",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
   },
   {
-    name: "HealthBridge Cloud",
-    category: "Healthcare SaaS",
-    revenue: "$2.8M ARR",
-    users: "500K+ patient sessions",
+    name: "Enterprise Web Apps",
+    description:
+      "Custom dashboards, internal tools, and production web systems architected for reliability — not template sites.",
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
   },
   {
-    name: "RetailMind OS",
-    category: "E-Commerce SaaS",
-    revenue: "$6.1M ARR",
-    users: "2M+ monthly orders",
+    name: "Workforce & Services",
+    description:
+      "Software for service businesses where coordination, consistency, and visibility matter as much as the UI.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
+  },
+  {
+    name: "AI-Ready Products",
+    description:
+      "LLM integrations, automation, and AI-augmented development when they add real value — never as a gimmick.",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "VioletForge didn't just build our platform — they architected a $4M ARR machine. Their AI workflows cut our launch timeline in half without a single security compromise.",
-    name: "Sarah Mitchell",
-    role: "CEO, FinPulse Global",
-    company: "FinTech · USA",
+      "We started ApplyForMe because job searching felt like a second full-time job — and consistency is hard when life does not pause. PrimeAxis built the platform our team runs every day: onboarding, role intake, ops workflows, and client visibility. They understood that our promise is real people and real applications, not bots, and the software reflects that.",
+    name: "Sneha Achunala",
+    role: "Co-founder",
+    company: "Apply For Me · Australia",
     rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
   },
   {
     quote:
-      "We've worked with agencies across London, Dubai, and Bangalore. VioletForge is in a league of their own — stunning design, obsessive QA, and they actually answer at 2 AM IST.",
-    name: "Rajesh Kapoor",
-    role: "VP Engineering, HealthBridge",
-    company: "Healthcare · India",
+      "Scaling a human application team means the product has to be dependable, clear, and fast for both clients and staff. PrimeAxis delivered that — from the Chrome extension flow to dashboards our operators use daily. They treated our mission like their own and helped us turn a frustrating problem into a structured service job seekers can trust.",
+    name: "Ojus Madan",
+    role: "Co-founder",
+    company: "Apply For Me · Australia",
     rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
   },
   {
     quote:
-      "The iterative dev-test loops gave us confidence at every sprint. We shipped v1 in 6 weeks — competitors quoted us 6 months. Genuinely the fastest delivery we've ever seen.",
-    name: "Elena Vasquez",
-    role: "Product Director, Nova Retail",
-    company: "E-Commerce · Spain",
+      "On the national financing platform, every formula and activity cost has to reconcile — there is no room for mismatch at any currency level. PrimeAxis brought strong engineering discipline to complex calculations, multi-country plans, and approval workflows. They shipped with the precision and reliability a programme of this scale demands.",
+    name: "Vansh Bansal",
+    role: "Engineering",
+    company: "World-Scale National Financing & Costing Platform",
     rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
-  },
-  {
-    quote:
-      "Our aviation ops dashboard handles 40+ airports in real time. The team understood complex logistics on day one. Investors called it 'enterprise-grade from week one.'",
-    name: "James Okonkwo",
-    role: "COO, AeroLink Systems",
-    company: "Aviation · UK",
-    rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
   },
 ];
 
@@ -165,31 +96,31 @@ export const processSteps = [
   {
     step: 1,
     title: "Discovery",
-    desc: "Goals, users, tech audit & AI opportunity mapping.",
+    desc: "Goals, users, constraints, and a clear scope for your product.",
   },
   {
     step: 2,
     title: "Design",
-    desc: "UX flows, prototypes & design system in Figma.",
+    desc: "UX flows, prototypes, and UI direction before we write production code.",
   },
   {
     step: 3,
     title: "Develop",
-    desc: "AI-augmented sprints with daily demos & transparency.",
+    desc: "AI-augmented sprints with regular demos and transparent progress.",
   },
   {
     step: 4,
     title: "Test",
-    desc: "Automated QA, security scans & UAT with your team.",
+    desc: "QA, edge cases, and review with your team — especially for data-heavy systems.",
   },
   {
     step: 5,
     title: "Deploy",
-    desc: "CI/CD, monitoring & zero-downtime go-live.",
+    desc: "Production release, monitoring, and a stable handover.",
   },
   {
     step: 6,
     title: "Iterate",
-    desc: "Feedback loops back to develop & test — ship improvements anytime.",
+    desc: "Improvements and new features as your product and users grow.",
   },
 ];

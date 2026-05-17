@@ -2,28 +2,28 @@
 
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { MapPin, Globe2, Zap } from "lucide-react";
-import { deliveryCountries } from "@/lib/site-data";
 import WorldMap from "./WorldMap";
 import GlobalFlags from "./GlobalFlags";
 
 export default function GlobalReach() {
   return (
     <section id="global" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 grid-pattern opacity-40 pointer-events-none" aria-hidden />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 text-violet-600 mb-4">
             <MapPin className="h-4 w-4" />
             <span className="text-sm font-semibold uppercase tracking-wider">
-              Global footprint
+              Delivery footprint
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-violet-950">
-            We work <span className="gradient-text">across the globe</span>
+            Australia & <span className="gradient-text">India</span>
           </h2>
           <p className="mt-4 text-violet-900/60 text-lg">
-            Real clients. Real deliveries. From the United States to India, Europe to APAC —
-            we&apos;ve shipped products for teams in every major market below.
+            Production software delivered in two markets — an Australian B2C operations
+            platform and national-scale systems in India for education and public-sector
+            programmes.
           </p>
         </AnimatedSection>
 
@@ -50,18 +50,19 @@ export default function GlobalReach() {
               </div>
               <div>
                 <h3 className="font-display text-2xl font-bold text-violet-950">
-                  Fastest delivery in the world
+                  Cross-market delivery
                 </h3>
                 <p className="text-violet-900/60 mt-1 max-w-lg">
-                  Follow-the-sun teams across {deliveryCountries.length}+ countries. Average MVP in 6 weeks.
+                  From Australian job-application operations to India&apos;s national
+                  education and financing platforms — same team, same precision.
                 </p>
               </div>
             </div>
             <div className="flex gap-8 shrink-0">
               {[
-                { v: "35+", l: "Countries" },
-                { v: "120+", l: "Projects" },
-                { v: "6wk", l: "Avg. MVP" },
+                { v: "2", l: "Countries" },
+                { v: "3", l: "Platforms" },
+                { v: "2", l: "Markets" },
               ].map((s) => (
                 <div key={s.l} className="text-center">
                   <p className="text-3xl font-bold gradient-text">{s.v}</p>

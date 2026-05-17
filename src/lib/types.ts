@@ -4,7 +4,10 @@ export interface Project {
   client: string;
   category: string;
   description: string;
-  image: string;
+  tagline?: string;
+  highlights?: string[];
+  image?: string;
+  url?: string;
   tech: string[];
   year: string;
   featured: boolean;

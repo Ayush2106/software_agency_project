@@ -1,6 +1,6 @@
-# VioletForge — AI-Powered Software Agency
+# PrimeAxis Solutions — AI-Powered Software Agency
 
-A stunning Next.js marketing site for an AI-powered custom software agency. Features Three.js hero visuals, Framer Motion animations, a light purple theme, global timezone clocks, contact form, and an admin panel to manage portfolio projects.
+A Next.js marketing site for PrimeAxis Solutions. Features Three.js hero visuals, Framer Motion animations, contact form with Gmail notifications, and a portfolio section.
 
 ## Quick Start
 
@@ -16,16 +16,16 @@ Open [http://localhost:3000](http://localhost:3000)
 | Route | Description |
 |-------|-------------|
 | `/` | Homepage — hero, services, about, global reach, portfolio, CTA |
-| `/contact` | Contact form |
-| `/admin` | Manage delivered projects (CRUD) |
+| `/contact` | Contact form (emails you via Gmail) |
 
-## Admin / Projects
+## Contact email (Gmail)
 
-- Portfolio projects are stored in `data/projects.json`
-- **GET** `/api/projects` — public, used on homepage
-- **POST / PUT / DELETE** `/api/projects` — optional auth via `ADMIN_SECRET` env var
+Copy `.env.example` to `.env.local` and set `GMAIL_USER`, `GMAIL_APP_PASSWORD`, and `CONTACT_EMAIL_TO`.
 
-Copy `.env.example` to `.env.local` and set `ADMIN_SECRET` in production. In the admin UI, enter the same secret to enable create/update/delete.
+## Portfolio
+
+- Projects are stored in `data/projects.json`
+- **GET** `/api/projects` — used on the homepage
 
 ## Tech Stack
 
@@ -37,6 +37,6 @@ Copy `.env.example` to `.env.local` and set `ADMIN_SECRET` in production. In the
 
 ## Customize
 
-- Brand name and copy: search for `VioletForge` across `src/`
+- Brand name and copy: search for `PrimeAxis` across `src/`
 - Theme colors: `src/app/globals.css` (`--violet-*` variables)
 - Sample projects: `data/projects.json`

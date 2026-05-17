@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendContactEmail } from "@/lib/email";
 import type { ContactFormData } from "@/lib/types";
 
 export async function POST(request: NextRequest) {
@@ -10,13 +11,14 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    // In production, integrate with email service (Resend, SendGrid, etc.)
-    console.log("[Contact Form]", {
-      ...body,
-      receivedAt: new Date().toISOString(),
-    });
-    return NextResponse.json({ success: true, message: "Message received!" });
-  } catch {
-    return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+
+    await sendContactEmail(body);
+    return NextResponse.json({ success: true, message: "Message sent!" });
+  } catch (err) {
+    console.error("[Contact]", err);
+    return NextResponse.json(
+      { error: "Could not send message. Please try again later." },
+      { status: 500 }
+    );
   }
 }

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { motion } from "framer-motion";
-import { ExternalLink, Sparkles } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import type { Project } from "@/lib/types";
 
 const categoryColors: Record<string, string> = {
@@ -12,6 +12,7 @@ const categoryColors: Record<string, string> = {
   "Mobile App": "from-fuchsia-500 to-pink-400",
   "E-Commerce": "from-indigo-500 to-violet-400",
   Enterprise: "from-sky-500 to-violet-400",
+  Government: "from-amber-500 to-orange-400",
 };
 
 export default function Portfolio() {
@@ -26,62 +27,41 @@ export default function Portfolio() {
       .finally(() => setLoading(false));
   }, []);
 
-  const featured = projects.filter((p) => p.featured);
-  const others = projects.filter((p) => !p.featured);
-
   return (
     <section id="work" className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
-          <div>
-            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">
-              Portfolio
-            </span>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-violet-950 mt-3">
-              Projects we&apos;ve <span className="gradient-text">shipped</span>
-            </h2>
-            <p className="mt-4 text-violet-900/60 max-w-lg">
-              Real deliverables for real clients — AI-native products built to scale globally.
-            </p>
-          </div>
-          <Link
-            href="/admin"
-            className="inline-flex items-center gap-2 text-sm font-medium text-violet-600 hover:text-violet-800"
-          >
-            <Sparkles className="h-4 w-4" />
-            Manage portfolio
-          </Link>
+        <AnimatedSection className="mb-16">
+          <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">
+            Portfolio
+          </span>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-violet-950 mt-3">
+            Our <span className="gradient-text">work</span>
+          </h2>
+          <p className="mt-4 text-violet-900/60 max-w-lg">
+            Three production platforms delivered in Australia and India — the proof behind PrimeAxis Solutions.
+          </p>
         </AnimatedSection>
 
         {loading ? (
           <div className="grid md:grid-cols-2 gap-6">
-            {[1, 2].map((i) => (
+            {[1, 2, 3].map((i) => (
               <div key={i} className="h-64 rounded-3xl bg-violet-100/50 animate-pulse" />
             ))}
           </div>
         ) : projects.length === 0 ? (
           <p className="text-center text-violet-900/50 py-12">
-            No projects yet. Add some in the{" "}
-            <Link href="/admin" className="text-violet-600 underline">
-              admin panel
-            </Link>
-            .
+            Portfolio coming soon.{" "}
+            <Link href="/contact" className="text-violet-600 underline">
+              Get in touch
+            </Link>{" "}
+            to discuss your project.
           </p>
         ) : (
-          <>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {featured.map((project, i) => (
-                <ProjectCard key={project.id} project={project} large delay={i * 0.1} />
-              ))}
-            </div>
-            {others.length > 0 && (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {others.map((project, i) => (
-                  <ProjectCard key={project.id} project={project} delay={i * 0.08} />
-                ))}
-              </div>
-            )}
-          </>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {projects.map((project, i) => (
+              <ProjectCard key={project.id} project={project} large delay={i * 0.1} />
+            ))}
+          </div>
         )}
       </div>
     </section>
@@ -123,9 +103,27 @@ function ProjectCard({
           {project.title}
         </h3>
         <p className="text-sm text-violet-600 mt-1">{project.client}</p>
+        {project.tagline ? (
+          <p className="text-sm font-semibold text-violet-800 mt-2 italic">
+            {project.tagline}
+          </p>
+        ) : null}
         <p className="text-violet-900/60 text-sm mt-3 flex-1 leading-relaxed">
           {project.description}
         </p>
+        {project.highlights && project.highlights.length > 0 ? (
+          <ul className="mt-4 space-y-2 flex-1">
+            {project.highlights.map((item) => (
+              <li
+                key={item}
+                className="flex gap-2 text-xs sm:text-sm text-violet-900/70 leading-snug"
+              >
+                <span className="text-violet-500 shrink-0 mt-0.5">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
         <div className="flex flex-wrap gap-2 mt-4">
           {project.tech.map((t) => (
             <span
@@ -138,7 +136,17 @@ function ProjectCard({
         </div>
         <div className="flex items-center justify-between mt-4 pt-4 border-t border-violet-100">
           <span className="text-xs text-violet-400">{project.year}</span>
-          <ExternalLink className="h-4 w-4 text-violet-400 group-hover:text-violet-600 transition-colors" />
+          {project.url ? (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-violet-400 hover:text-violet-600 transition-colors"
+              aria-label={`Visit ${project.title}`}
+            >
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          ) : null}
         </div>
       </motion.article>
     </AnimatedSection>

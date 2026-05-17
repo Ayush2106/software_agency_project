@@ -13,11 +13,11 @@ export default function Footer() {
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-violet-400 text-white">
                 <Sparkles className="h-4 w-4" />
               </span>
-              <span className="font-display text-xl font-bold">VioletForge</span>
+              <span className="font-display text-xl font-bold">PrimeAxis Solutions</span>
             </Link>
             <p className="text-violet-900/60 max-w-sm text-sm leading-relaxed">
-              AI-powered custom software studio. We build websites, mobile apps, and
-              intelligent products that ship worldwide — on your timezone.
+              Custom software studio delivering production platforms in Australia and India.
+              Available for freelance and contract engagements worldwide.
             </p>
             <div className="flex gap-3 mt-6">
               {socialIcons.map((Icon, i) => (
@@ -44,12 +44,27 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-violet-900 mb-4">Admin</h4>
+            <h4 className="font-semibold text-violet-900 mb-4">Get in touch</h4>
             <ul className="space-y-2 text-sm text-violet-900/60">
-              <li><Link href="/admin" className="hover:text-violet-700">Manage Projects</Link></li>
+              <li>
+                <a
+                  href="mailto:ayush21singla@gmail.com"
+                  className="hover:text-violet-700 break-all"
+                >
+                  ayush21singla@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:aryansingla1101@gmail.com"
+                  className="hover:text-violet-700 break-all"
+                >
+                  aryansingla1101@gmail.com
+                </a>
+              </li>
             </ul>
             <p className="mt-6 text-xs text-violet-400">
-              © {new Date().getFullYear()} VioletForge. All rights reserved.
+              © {new Date().getFullYear()} PrimeAxis Solutions. All rights reserved.
             </p>
           </div>
         </div>

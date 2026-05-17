@@ -53,11 +53,11 @@ export default function ContactPage() {
             Contact
           </span>
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-violet-950 mt-3">
-            Let&apos;s build your <span className="gradient-text">next big thing</span>
+            Let&apos;s talk about your <span className="gradient-text">project</span>
           </h1>
           <p className="mt-4 text-violet-900/60 text-lg">
-            Share your project details. We typically respond within 2 hours during business
-            hours — anywhere in the world.
+            Share what you are building, your timeline, and budget range. We usually reply within
+            one business day.
           </p>
         </motion.div>
 
@@ -69,9 +69,9 @@ export default function ContactPage() {
             className="lg:col-span-2 space-y-6"
           >
             {[
-              { icon: Mail, title: "Email us", value: "hello@violetforge.dev" },
-              { icon: MessageSquare, title: "Live chat", value: "Available 24/7 globally" },
-              { icon: Building2, title: "HQ", value: "Remote-first, worldwide" },
+              { icon: Mail, title: "Email us", value: "ayush21singla@gmail.com" },
+              { icon: MessageSquare, title: "Engagements", value: "Freelance & contract projects" },
+              { icon: Building2, title: "Delivery", value: "Australia · India · Remote" },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 p-5 rounded-2xl glass">
                 <div className="p-3 rounded-xl bg-violet-100 text-violet-600">
