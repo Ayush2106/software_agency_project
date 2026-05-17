@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8ff;
+  --foreground: #1a1033;
+  --violet-50: #f5f3ff;
+  --violet-100: #ede9fe;
+  --violet-200: #ddd6fe;
+  --violet-300: #c4b5fd;
+  --violet-400: #a78bfa;
+  --violet-500: #8b5cf6;
+  --violet-600: #7c3aed;
+  --violet-700: #6d28d9;
+  --violet-800: #5b21b6;
+  --violet-900: #4c1d95;
+  --glow: rgba(124, 58, 237, 0.35);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-syne);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-syne), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--violet-200);
+  color: var(--violet-900);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 40%, #6d28d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+.mesh-bg {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(167, 139, 250, 0.25) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(196, 181, 253, 0.2) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(124, 58, 237, 0.12) 0px, transparent 50%);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 40px var(--glow); }
+  50% { box-shadow: 0 0 80px rgba(124, 58, 237, 0.5); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
