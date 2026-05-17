@@ -18,7 +18,6 @@ function initials(name: string) {
 export default function Testimonials() {
   return (
     <section id="reviews" className="py-24 bg-gradient-to-b from-violet-50/80 to-white">
-      {/* eslint-disable-next-line react/no-unknown-property */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">

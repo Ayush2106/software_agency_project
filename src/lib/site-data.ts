@@ -65,7 +65,16 @@ export const industries = [
   },
 ];
 
-export const testimonials = [
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  rating: number;
+  image?: string;
+};
+
+export const testimonials: Testimonial[] = [
   {
     quote:
       "We started ApplyForMe because job searching felt like a second full-time job — and consistency is hard when life does not pause. PrimeAxis built the platform our team runs every day: onboarding, role intake, ops workflows, and client visibility. They understood that our promise is real people and real applications, not bots, and the software reflects that.",
