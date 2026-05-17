@@ -2,7 +2,6 @@
 
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { MapPin, Globe2, Zap } from "lucide-react";
-import WorldMap from "./WorldMap";
 import GlobalFlags from "./GlobalFlags";
 
 export default function GlobalReach() {
@@ -14,35 +13,27 @@ export default function GlobalReach() {
           <div className="inline-flex items-center gap-2 text-violet-600 mb-4">
             <MapPin className="h-4 w-4" />
             <span className="text-sm font-semibold uppercase tracking-wider">
-              Delivery footprint
+              Global reach
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-violet-950">
-            Australia & <span className="gradient-text">India</span>
+            We work <span className="gradient-text">across the globe</span>
           </h2>
           <p className="mt-4 text-violet-900/60 text-lg">
-            Production software delivered in two markets — an Australian B2C operations
-            platform and national-scale systems in India for education and public-sector
-            programmes.
+            Available for freelance and contract work worldwide. Production deliveries in
+            Australia and India — with more markets always open.
           </p>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.1} className="mb-12">
+        <AnimatedSection delay={0.1}>
           <div className="flex items-center justify-center gap-2 mb-6 text-violet-700">
             <Globe2 className="h-5 w-5" />
-            <span className="font-semibold">Countries where we&apos;ve delivered</span>
+            <span className="font-semibold">Countries we work with</span>
           </div>
           <GlobalFlags />
         </AnimatedSection>
 
-        <AnimatedSection delay={0.2} className="mb-14">
-          <p className="text-center text-sm text-violet-500 mb-4 font-medium">
-            Hover a flag on the map
-          </p>
-          <WorldMap />
-        </AnimatedSection>
-
-        <AnimatedSection delay={0.3}>
+        <AnimatedSection delay={0.2} className="mt-14">
           <div className="glass-strong rounded-3xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border border-violet-100">
             <div className="flex items-center gap-4">
               <div className="p-4 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-500 text-white">
@@ -60,9 +51,9 @@ export default function GlobalReach() {
             </div>
             <div className="flex gap-8 shrink-0">
               {[
-                { v: "2", l: "Countries" },
+                { v: "2", l: "Delivered" },
                 { v: "3", l: "Platforms" },
-                { v: "2", l: "Markets" },
+                { v: "15+", l: "Markets" },
               ].map((s) => (
                 <div key={s.l} className="text-center">
                   <p className="text-3xl font-bold gradient-text">{s.v}</p>

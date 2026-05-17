@@ -1,19 +1,27 @@
 /** ISO 3166-1 alpha-2 — used with flagcdn.com */
-export const deliveryCountries = [
-  {
-    code: "in",
-    name: "India",
-    mapX: 38,
-    mapY: 42,
-    detail: "National education & enterprise platforms",
-  },
-  {
-    code: "au",
-    name: "Australia",
-    mapX: 72,
-    mapY: 72,
-    detail: "B2C operations · Apply For Me",
-  },
+export type CountryFlag = {
+  code: string;
+  name: string;
+  /** True for markets where we have shipped production work */
+  delivered?: boolean;
+};
+
+export const globalFlags: CountryFlag[] = [
+  { code: "us", name: "United States" },
+  { code: "ca", name: "Canada" },
+  { code: "gb", name: "United Kingdom" },
+  { code: "de", name: "Germany" },
+  { code: "fr", name: "France" },
+  { code: "ae", name: "UAE" },
+  { code: "in", name: "India", delivered: true },
+  { code: "sg", name: "Singapore" },
+  { code: "jp", name: "Japan" },
+  { code: "au", name: "Australia", delivered: true },
+  { code: "br", name: "Brazil" },
+  { code: "nl", name: "Netherlands" },
+  { code: "es", name: "Spain" },
+  { code: "za", name: "South Africa" },
+  { code: "mx", name: "Mexico" },
 ];
 
 export function flagUrl(code: string, width = 160) {
